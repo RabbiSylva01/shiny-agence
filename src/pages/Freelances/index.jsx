@@ -1,4 +1,4 @@
-import Card from '../../Composants/Card/index'
+import Card from '../../Composants/Card'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import { Loader } from '../../utils/style/Atoms'
@@ -54,7 +54,7 @@ function Freelances() {
       </PageSubtitle>
       {isLoading ? (
         <LoaderWrapper>
-          <Loader theme={theme} />
+          <Loader theme={theme} data-testid="loader" />
         </LoaderWrapper>
       ) : (
         <CardsContainer>
@@ -64,6 +64,7 @@ function Freelances() {
               label={profile.job}
               title={profile.name}
               picture={profile.picture}
+              theme={theme}
             />
           ))}
         </CardsContainer>
