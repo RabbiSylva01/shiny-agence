@@ -89,7 +89,7 @@ function Survey() {
   function saveReply(answer) {
     saveAnswers({ [questionNumber]: answer })
   }
-  const { data, isLoading, error } = useFetch(`http://localhost:8000/survey`)
+  const { data, isLoading, error } = useFetch(`https://fierce-taiga-87212.herokuapp.com/survey`)
   const surveyData = data?.surveyData
 
   if (error) {

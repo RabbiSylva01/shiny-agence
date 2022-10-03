@@ -99,7 +99,7 @@ function Results() {
   const queryParams = formatQueryParams(answers)
 
   const { data, isLoading, error } = useFetch(
-    `http://localhost:8000/results?${queryParams}`
+    `https://fierce-taiga-87212.herokuapp.com/results?${queryParams}`
   )
 
   if (error) {
