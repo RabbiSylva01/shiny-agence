@@ -19,7 +19,7 @@ const freelancersMockedData = [
 ]
 
 const server = setupServer(
-  rest.get('http://localhost:8000/freelances', (req, res, ctx) => {
+  rest.get('https://fierce-taiga-87212.herokuapp.com/freelances', (req, res, ctx) => {
     return res(ctx.json({ freelancersList: freelancersMockedData }))
   })
 )
