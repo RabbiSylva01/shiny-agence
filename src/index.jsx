@@ -13,7 +13,7 @@ import GlobalStyle from './utils/style/GlobalStyle';
 import { ThemeProvider, SurveyProvider } from './utils/context';
 import 'bootstrap/dist/css/bootstrap.css';
 import {  } from "./sass/mon.scss";
-import {register as registerServiceWorker } from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
 
@@ -49,5 +49,5 @@ root.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
-registerServiceWorker();
+serviceWorkerRegistration.register();
 
