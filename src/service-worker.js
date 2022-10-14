@@ -70,3 +70,29 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+var CACHE_NAME = 'my-cache_name';
+var targetsToCache = [
+  'https://fierce-taiga-87212.herokuapp.com/survey',
+  'https://fierce-taiga-87212.herokuapp.com/results',
+  'https://fierce-taiga-87212.herokuapp.com/freelances'
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        return cache.addAll(targetsToCache);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+      caches.match(event.request).then(function(response) {
+
+       // This returns the previously cached response 
+       // or fetch a new once if not already in the cache
+          return response || fetch(event.request);
+      })
+  );
+});
