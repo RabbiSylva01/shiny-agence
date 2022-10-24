@@ -44,7 +44,7 @@ const LoaderWrapper = styled.div`
 function Freelances() {
   const { theme } = useTheme()
   const { data, isLoading, error } = useFetch(
-    `https://fierce-taiga-87212.herokuapp.com/freelances`
+    `https://fierce-taiga-87212.herokuapp.com//freelances`
   )
 
   const freelancersList = data?.freelancersList
