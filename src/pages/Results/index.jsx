@@ -36,7 +36,6 @@ const ResultsTitle = styled.h2`
   @media (max-width: 700px) {
     font-size: 20px;
     padding-left: 5px;
-
   }
 `
 
@@ -44,7 +43,6 @@ const DescriptionWrapper = styled.div`
   padding: 60px;
   @media (max-width: 700px) {
     padding: 30px;
-
   }
 `
 
